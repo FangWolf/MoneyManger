@@ -21,8 +21,8 @@ public class Login extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Connector.getDatabase();
-                /*Intent intent = new Intent(Login.this,MainActivity.class);
-                startActivity(intent);*/
+                Intent intent = new Intent(Login.this,MainActivity.class);
+                startActivity(intent);
             }
         });
 

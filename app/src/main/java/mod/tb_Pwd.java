@@ -1,10 +1,6 @@
-package dao;
+package mod;
 
-/**
- * Created by siyu2 on 2017/6/13.
- */
-
-public class PwdDAO {
+public class tb_Pwd {
     private String password;
 
     public String getPassword() {

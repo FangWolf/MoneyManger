@@ -6,7 +6,10 @@
     <version value="1" />
 
     <list>
-        <mapping class="dao.PwdDAO" />
+        <mapping class="mod.tb_Pwd" />
+        <mapping class="mod.tb_Note"/>
+        <mapping class="mod.tb_Getmoeny"/>
+        <mapping class="mod.tb_Losemoney"/>
 
     </list>
 

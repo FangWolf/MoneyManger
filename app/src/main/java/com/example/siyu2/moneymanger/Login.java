@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import org.litepal.tablemanager.Connector;
+
 public class Login extends AppCompatActivity {
 
     @Override
@@ -18,8 +20,9 @@ public class Login extends AppCompatActivity {
         btnlogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Login.this,MainActivity.class);
-                startActivity(intent);
+                Connector.getDatabase();
+                /*Intent intent = new Intent(Login.this,MainActivity.class);
+                startActivity(intent);*/
             }
         });
 

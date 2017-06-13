@@ -19,11 +19,33 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".Login">
+        <activity android:name=".Login"
+            android:label="由你掌控">
         </activity>
         <activity android:name=".MainActivity">
         </activity>
-        <activity android:name=".Setting">
+        <activity android:name=".Addget"
+            android:label="新增收入">
+        </activity>
+        <activity android:name=".Addlose"
+            android:label="新增支出">
+        </activity>
+        <activity android:name=".Addnote"
+            android:label="新增便签">
+        </activity>
+        <activity android:name=".Detailget"
+            android:label="收入详细">
+        </activity>
+        <activity android:name=".Detaillose"
+            android:label="支出详细">
+        </activity>
+        <activity android:name=".Detailall"
+            android:label="详细统计">
+        </activity>
+        <activity android:name=".Setting"
+            android:label="设置">
+        </activity>
+        <activity android:name=".Help">
         </activity>
     </application>
 

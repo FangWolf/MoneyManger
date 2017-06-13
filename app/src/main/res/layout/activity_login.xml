@@ -27,7 +27,7 @@
         android:layout_marginBottom="15dp">
 
         <ImageView
-            android:src="@drawable/suo"
+            android:src="@drawable/lock"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 

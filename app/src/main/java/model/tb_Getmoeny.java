@@ -1,4 +1,4 @@
-package mod;
+package model;
 
 public class tb_Getmoeny {
     private int _id;     //编号

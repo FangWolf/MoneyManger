@@ -10,24 +10,24 @@
         android:layout_height="wrap_content">
 
         <ImageButton
-            android:id="@+id/zero"
+            android:id="@+id/AddGet"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/x"
+            android:src="@drawable/addget"
             android:layout_weight="1"/>
 
         <ImageButton
-            android:id="@+id/one"
+            android:id="@+id/AddLose"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/xx"
+            android:src="@drawable/addlose"
             android:layout_weight="1"/>
 
         <ImageButton
-            android:id="@+id/two"
+            android:id="@+id/AddNote"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/xxx"
+            android:src="@drawable/addnote"
             android:layout_weight="1"/>
 
     </LinearLayout>
@@ -63,27 +63,28 @@
         android:layout_height="wrap_content">
 
         <ImageButton
-            android:id="@+id/three"
+            android:id="@+id/DetailGet"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/y"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:src="@drawable/detailget"/>
 
         <ImageButton
-            android:id="@+id/four"
+            android:id="@+id/DetailLose"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/yy"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:src="@drawable/detaillose"/>
 
         <ImageButton
-            android:id="@+id/five"
+            android:id="@+id/DetailAll"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/yyy"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:src="@drawable/detailall"/>
 
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -116,24 +117,24 @@
         android:layout_height="wrap_content">
 
         <ImageButton
-            android:id="@+id/six"
+            android:id="@+id/Setting"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/z"
+            android:src="@drawable/setting"
             android:layout_weight="1"/>
 
         <ImageButton
-            android:id="@+id/seven"
+            android:id="@+id/Help"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/zz"
+            android:src="@drawable/help"
             android:layout_weight="1"/>
 
         <ImageButton
-            android:id="@+id/eight"
+            android:id="@+id/Logout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/zzz"
+            android:src="@drawable/logout"
             android:layout_weight="1"/>
 
     </LinearLayout>
@@ -160,7 +161,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="退出"/>
+            android:text="注销"/>
 
     </LinearLayout>
 

@@ -8,6 +8,6 @@ public class Addnote extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_addall);
+        setContentView(R.layout.activity_addnote);
     }
 }

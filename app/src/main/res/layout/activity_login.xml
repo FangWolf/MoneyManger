@@ -27,15 +27,15 @@
         android:layout_marginBottom="15dp">
 
         <ImageView
-            android:src="@drawable/lock"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:src="@drawable/lock"/>
 
         <EditText
             android:id="@+id/password"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:hint="初始密码为空"
+            android:hint="初始密码为123"
             android:inputType="textPassword"
             />
     </LinearLayout>

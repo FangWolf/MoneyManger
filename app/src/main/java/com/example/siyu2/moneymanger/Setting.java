@@ -25,7 +25,7 @@ public class Setting extends AppCompatActivity {
             public void onClick(View view) {
                 PwdDAO pwdDAO = new PwdDAO();
                 Tb_Pwd tb_pwd = new Tb_Pwd(txtpwd.getText().toString());
-                pwdDAO.add(tb_pwd);
+                pwdDAO.alter(tb_pwd);// 修改用户密码
             }
         });
     }

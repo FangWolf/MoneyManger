@@ -4,7 +4,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Spinner;
@@ -37,9 +36,9 @@ public class Addget extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_addget);
-        txtMoney = (EditText) findViewById(R.id.txtMoney);// 获取金额文本框
-        txtFlag = (EditText) findViewById(R.id.txtFlag);// 获取备注文本框
-        txtType = (Spinner) findViewById(R.id.txtType);// 获取类别下拉列表
+        txtMoney = (EditText) findViewById(R.id.txtMoney);
+        txtFlag = (EditText) findViewById(R.id.txtFlag);
+        txtType = (Spinner) findViewById(R.id.txtType);
         ImageButton btnsend = (ImageButton) findViewById(R.id.btnSend);
         ImageButton btnrewrite = (ImageButton) findViewById(R.id.btnRewrite);
         btndatechoose = (ImageButton) findViewById(R.id.btnDatechoose);
@@ -55,11 +54,12 @@ public class Addget extends AppCompatActivity {
         btnrewrite.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                txtMoney.setText("");// 设置金额文本框为空
-                txtMoney.setHint("多了多少啊~");// 为金额文本框设置提示
-                txtDate.setText("点击后边的按钮选择日期");//日期
-                txtFlag.setText("");// 设置备注文本框为空
-                txtType.setSelection(0);// 设置类别下拉列表默认选择第一项
+                txtMoney.setText("");
+                txtMoney.setHint("多了多少啊~");
+                txtDate.setText("点击后边的按钮选择日期");
+                txtFlag.setText("");
+                txtType.setSelection(0);
+                Toast.makeText(Addget.this,"想清楚了再写",Toast.LENGTH_SHORT).show();
             }
         });
 

@@ -22,11 +22,11 @@ import android.widget.Toast;
 public class Addget extends AppCompatActivity {
 
     int mYear, mMonth, mDay;
-    ImageButton btn;
+    ImageButton btndatechoose;
     TextView txtDate;
     final int DATE_DIALOG = 1;
 
-    private Spinner txtSpinner;
+    private Spinner txtType;
     private List<String> data_list;
     private ArrayAdapter<String> arr_adapter;
 
@@ -39,10 +39,10 @@ public class Addget extends AppCompatActivity {
         setContentView(R.layout.activity_addget);
         txtMoney = (EditText) findViewById(R.id.txtMoney);// 获取金额文本框
         txtFlag = (EditText) findViewById(R.id.txtFlag);// 获取备注文本框
-        txtSpinner = (Spinner) findViewById(R.id.txtSpinner);// 获取类别下拉列表
+        txtType = (Spinner) findViewById(R.id.txtType);// 获取类别下拉列表
         ImageButton btnsend = (ImageButton) findViewById(R.id.btnSend);
         ImageButton btnrewrite = (ImageButton) findViewById(R.id.btnRewrite);
-        btn = (ImageButton) findViewById(R.id.dateChoose);
+        btndatechoose = (ImageButton) findViewById(R.id.btnDatechoose);
         txtDate = (TextView) findViewById(R.id.txtDate);
 
         btnsend.setOnClickListener(new View.OnClickListener() {
@@ -59,11 +59,11 @@ public class Addget extends AppCompatActivity {
                 txtMoney.setHint("多了多少啊~");// 为金额文本框设置提示
                 txtDate.setText("点击后边的按钮选择日期");//日期
                 txtFlag.setText("");// 设置备注文本框为空
-                txtSpinner.setSelection(0);// 设置类别下拉列表默认选择第一项
+                txtType.setSelection(0);// 设置类别下拉列表默认选择第一项
             }
         });
 
-        btn.setOnClickListener(new View.OnClickListener() {
+        btndatechoose.setOnClickListener(new View.OnClickListener() {
          @Override
          public void onClick(View v) {
              showDialog(DATE_DIALOG);
@@ -74,7 +74,7 @@ public class Addget extends AppCompatActivity {
         mMonth = ca.get(Calendar.MONTH);
         mDay = ca.get(Calendar.DAY_OF_MONTH);
 
-        txtSpinner = (Spinner) findViewById(R.id.txtSpinner);
+        txtType = (Spinner) findViewById(R.id.txtType);
         data_list = new ArrayList<String>();
         data_list.add("工资");
         data_list.add("奖金");
@@ -82,7 +82,7 @@ public class Addget extends AppCompatActivity {
         data_list.add("其他");
         arr_adapter= new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, data_list);
         arr_adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        txtSpinner.setAdapter(arr_adapter);
+        txtType.setAdapter(arr_adapter);
     }
 
     @Override

@@ -32,7 +32,7 @@ public class Addlose extends AppCompatActivity {int mYear, mMonth, mDay;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_addget);
+        setContentView(R.layout.activity_addlose);
         txtMoney = (EditText) findViewById(R.id.txtMoney);
         txtFlag = (EditText) findViewById(R.id.txtFlag);
         txtType = (Spinner) findViewById(R.id.txtType);

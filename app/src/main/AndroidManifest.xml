@@ -45,7 +45,8 @@
         <activity android:name=".Setting"
             android:label="设置">
         </activity>
-        <activity android:name=".Help">
+        <activity android:name=".About"
+            android:label="关于">
         </activity>
     </application>
 

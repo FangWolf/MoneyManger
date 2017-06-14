@@ -6,19 +6,23 @@
     android:orientation="vertical">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="请设置密码"/>
+        android:textSize="30sp"
+        android:gravity="center"
+        android:textColor="#3688ff"
+        android:text="设置你的密码"/>
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="你的密码"/>
+        android:hint="不要太多哦~"/>
 
     <Button
-        android:id="@+id/okyourpass"
+        android:id="@+id/btnOkpwd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:text="确定"/>
 
 </LinearLayout>

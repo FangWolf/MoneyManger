@@ -1,6 +1,6 @@
 package model;
 
-public class tb_Getmoeny {
+public class Tb_Getmoeny {
     private int _id;     //编号
     private double money;//金额
     private String time;//时间

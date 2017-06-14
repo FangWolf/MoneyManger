@@ -4,7 +4,7 @@ package model;
  * Created by siyu2 on 2017/6/13.
  */
 
-public class tb_Note {
+public class Tb_Note {
     private int id;
     private String note;
 

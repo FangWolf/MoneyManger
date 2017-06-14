@@ -6,10 +6,10 @@
     <version value="1" />
 
     <list>
-        <mapping class="model.tb_Pwd" />
-        <mapping class="model.tb_Note"/>
-        <mapping class="model.tb_Getmoeny"/>
-        <mapping class="model.tb_Losemoney"/>
+        <mapping class="model.Tb_Pwd" />
+        <mapping class="model.Tb_Note"/>
+        <mapping class="model.Tb_Getmoeny"/>
+        <mapping class="model.Tb_Losemoney"/>
 
     </list>
 

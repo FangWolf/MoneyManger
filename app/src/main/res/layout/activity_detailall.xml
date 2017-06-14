@@ -5,37 +5,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
+    <fragment
+        android:id="@+id/up"
+        android:name="com.example.siyu2.moneymanger.FragmentTop"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="30sp"
-        android:gravity="center"
-        android:textColor="#3688ff"
-        android:text="选择统计项"/>
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
 
-    <LinearLayout
+    <FrameLayout
+        android:id="@+id/down"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="0dp"
+        android:layout_weight="5">
 
-        <Button
-            android:id="@+id/btnDetailget"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="收入统计"
-            android:layout_weight="1"/>
-
-        <Button
-            android:id="@+id/btnDetaillose"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="支出统计"
-            android:layout_weight="1"/>
-
-        <Button
-            android:id="@+id/btnDetailnote"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="便签统计"
-            android:layout_weight="1"/>
-    </LinearLayout>
+    </FrameLayout>
 </LinearLayout>

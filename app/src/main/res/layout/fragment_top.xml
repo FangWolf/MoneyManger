@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:gravity="center"
+        android:textColor="#3688ff"
+        android:text="选择统计项"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btnDetailget"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="收入统计"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/btnDetaillose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="支出统计"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/btnDetailnote"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="便签统计"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+</LinearLayout>

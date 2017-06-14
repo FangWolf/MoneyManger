@@ -1,4 +1,4 @@
-package com.example.siyu2.moneymanger;
+package fragment;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -7,12 +7,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class FragmentTop extends Fragment {
+import com.example.siyu2.moneymanger.R;
+
+public class FragmentDnote extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle
             savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_top,container,false);
+        View view = inflater.inflate(R.layout.fragment_downnote,container,false);
         return view;
     }
 }

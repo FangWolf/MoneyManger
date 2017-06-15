@@ -25,14 +25,12 @@ public class Login extends AppCompatActivity {
         btnlogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 Connector.getDatabase();
                 Intent intent = new Intent(Login.this,MainActivity.class);
                 if (pwdDAO.find().getPassword().equals(password.getText().toString())) {
-
                     startActivity(intent);
                 } else {
-                    Toast.makeText(Login.this,"wrong",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Login.this,"wrong,again",Toast.LENGTH_SHORT).show();
                 }
 
             }

@@ -7,6 +7,9 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
+import DAO.NoteDAO;
+import model.Tb_Note;
+
 public class Addnote extends AppCompatActivity {
 
     @Override
@@ -19,7 +22,17 @@ public class Addnote extends AppCompatActivity {
         btnsend.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(Addnote.this,"提交成功",Toast.LENGTH_SHORT).show();
+
+                if (!txtnote.getText().toString().isEmpty()) {
+                    NoteDAO noteDAO = new NoteDAO();
+                    Tb_Note tb_note = new Tb_Note(txtnote.getText().toString());
+                    noteDAO.add(tb_note);
+                    Toast.makeText(Addnote.this,"提交成功",Toast.LENGTH_SHORT).show();
+                    txtnote.setText("");
+                } else {
+                    Toast.makeText(Addnote.this,"啥都不写交什么！",Toast.LENGTH_SHORT).show();
+                }
+
             }
         });
         btnrewrite.setOnClickListener(new View.OnClickListener() {

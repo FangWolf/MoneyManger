@@ -20,7 +20,6 @@ public class PwdDAO{
         Tb_Pwd tbPwd = new Tb_Pwd();
         tbPwd.setPassword(tb_pwd.getPassword());
         tbPwd.update(1);
-
     }
 
     public Tb_Pwd find() {

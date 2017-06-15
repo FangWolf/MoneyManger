@@ -6,10 +6,10 @@ public class Tb_Pwd extends DataSupport{
 
     private String password;
 
-    public Tb_Pwd(){super();}
+    public Tb_Pwd(){}
 
     public Tb_Pwd(String password) {
-        super();
+
         this.password = password;
     }
 

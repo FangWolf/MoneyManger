@@ -1,12 +1,15 @@
 package model;
 
-/**
- * Created by siyu2 on 2017/6/13.
- */
+import org.litepal.crud.DataSupport;
 
-public class Tb_Note {
-    private int id;
+public class Tb_Note extends DataSupport{
     private String note;
+
+    public Tb_Note() {}
+
+    public Tb_Note(String note) {
+        this.note = note;
+    }
 
     public String getNote() {
         return note;
@@ -16,12 +19,4 @@ public class Tb_Note {
         this.note = note;
     }
 
-    public int getId() {
-
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
 }

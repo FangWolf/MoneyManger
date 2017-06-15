@@ -13,4 +13,11 @@
         android:textColor="#3688ff"
         android:text="收入历史记录"/>
 
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/getList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </android.support.v7.widget.RecyclerView>
+
 </LinearLayout>

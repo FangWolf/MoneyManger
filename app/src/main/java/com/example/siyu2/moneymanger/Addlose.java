@@ -17,6 +17,9 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
+import DAO.LoseDAO;
+import model.Tb_Losemoney;
+
 public class Addlose extends AppCompatActivity {int mYear, mMonth, mDay;
     ImageButton btndatechoose;
     TextView txtDate;
@@ -40,7 +43,17 @@ public class Addlose extends AppCompatActivity {int mYear, mMonth, mDay;
         btnsend.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                LoseDAO loseDAO = new LoseDAO();
+                String strMoney = txtMoney.getText().toString();
+                Tb_Losemoney tb_losemoney = new Tb_Losemoney(Double.parseDouble(strMoney),txtDate.getText().toString(),txtType.getSelectedItem().toString(),txtFlag.getText().toString());
+                loseDAO.add(tb_losemoney);
                 Toast.makeText(Addlose.this,"添加成功",Toast.LENGTH_SHORT).show();
+                txtMoney.setText("");
+                txtMoney.setHint("少了多少呢~");
+                txtDate.setText("点击后边的按钮选择日期");
+                txtFlag.setText("");
+                txtType.setSelection(0);
             }
         });
 

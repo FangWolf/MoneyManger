@@ -17,15 +17,4 @@ public class GetDAO extends DataSupport {
         tbGetmoeny.save();
     }
 
-    public void find() {
-        //查询数据
-        List<Tb_Getmoeny> allget = DataSupport.findAll(Tb_Getmoeny.class);
-        for (int i = 0;i<allget.size();i++)
-        {
-
-            /*Log.d("Detailget",allget.get(i).getFlag());*/
-        }
-        /*return allget.get(1);*/
-    }
-
 }

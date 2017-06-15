@@ -18,6 +18,12 @@ public class Tb_Losemoney extends DataSupport{
         this.flag = flag;
     }
 
+    public Tb_Losemoney (String money, String time, String type) {
+        this.money = money;
+        this.time = time;
+        this.type = type;
+    }
+
 
     public String getMoney() {
         return money;

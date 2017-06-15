@@ -45,8 +45,7 @@ public class Addlose extends AppCompatActivity {int mYear, mMonth, mDay;
             public void onClick(View view) {
 
                 LoseDAO loseDAO = new LoseDAO();
-                String strMoney = txtMoney.getText().toString();
-                Tb_Losemoney tb_losemoney = new Tb_Losemoney(Double.parseDouble(strMoney),txtDate.getText().toString(),txtType.getSelectedItem().toString(),txtFlag.getText().toString());
+                Tb_Losemoney tb_losemoney = new Tb_Losemoney(txtMoney.getText().toString(),txtDate.getText().toString(),txtType.getSelectedItem().toString(),txtFlag.getText().toString());
                 loseDAO.add(tb_losemoney);
                 Toast.makeText(Addlose.this,"添加成功",Toast.LENGTH_SHORT).show();
                 txtMoney.setText("");
@@ -92,7 +91,7 @@ public class Addlose extends AppCompatActivity {int mYear, mMonth, mDay;
     }
 
     public void display() {
-        txtDate.setText(new StringBuffer().append(mYear).append("年").append(mMonth).append("月").append(mDay+ 1).append("日"));
+        txtDate.setText(new StringBuffer().append(mYear).append(".").append(mMonth).append(".").append(mDay+ 1).append(""));
     }
 
     private DatePickerDialog.OnDateSetListener mdateListener = new DatePickerDialog.OnDateSetListener() {

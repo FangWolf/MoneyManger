@@ -48,8 +48,7 @@ public class Addget extends AppCompatActivity {
             public void onClick(View view) {
                 //添加收入
                 GetDAO getDAO = new GetDAO();
-                String strMoney = txtMoney.getText().toString();
-                Tb_Getmoeny tb_getmoeny = new Tb_Getmoeny(Double.parseDouble(strMoney),txtDate.getText().toString(),txtType.getSelectedItem().toString(),txtFlag.getText().toString());
+                Tb_Getmoeny tb_getmoeny = new Tb_Getmoeny(txtMoney.getText().toString(),txtDate.getText().toString(),txtType.getSelectedItem().toString(),txtFlag.getText().toString());
                 getDAO.add(tb_getmoeny);
                 Toast.makeText(Addget.this,"添加成功",Toast.LENGTH_SHORT).show();
                 txtMoney.setText("");
@@ -97,7 +96,7 @@ public class Addget extends AppCompatActivity {
     }
 
     public void display() {
-        txtDate.setText(new StringBuffer().append(mYear).append("年").append(mMonth).append("月").append(mDay+ 1).append("日"));
+        txtDate.setText(new StringBuffer().append(mYear).append(".").append(mMonth).append(".").append(mDay+ 1).append(""));
     }
 
     private DatePickerDialog.OnDateSetListener mdateListener = new DatePickerDialog.OnDateSetListener() {

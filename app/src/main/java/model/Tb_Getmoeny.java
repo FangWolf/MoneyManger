@@ -4,25 +4,38 @@ import org.litepal.crud.DataSupport;
 
 public class Tb_Getmoeny extends DataSupport{
 
-    private double money;//金额
+    private  int id;
+    private String money;//金额
     private String time;//时间
     private String type;//类型
     private String flag;//备注
 
     public Tb_Getmoeny () {}
 
-    public Tb_Getmoeny (double money, String time, String type, String flag) {
+    public Tb_Getmoeny (String money, String time, String type, String flag) {
         this.money = money;
         this.time = time;
         this.type = type;
         this.flag = flag;
     }
+    public Tb_Getmoeny (String money, String time, String type) {
+        this.money = money;
+        this.time = time;
+        this.type = type;
+    }
 
-    public double getMoney() {
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+    public String getMoney() {
         return money;
     }
 
-    public void setMoney(double money) {
+    public void setMoney(String money) {
         this.money = money;
     }
 

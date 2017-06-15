@@ -1,18 +1,21 @@
 package model;
 
-public class Tb_Getmoeny {
-    private int _id;     //编号
+import org.litepal.crud.DataSupport;
+
+public class Tb_Getmoeny extends DataSupport{
+
     private double money;//金额
     private String time;//时间
     private String type;//类型
     private String flag;//备注
 
-    public int get_id() {
-        return _id;
-    }
+    public Tb_Getmoeny () {}
 
-    public void set_id(int _id) {
-        this._id = _id;
+    public Tb_Getmoeny (double money, String time, String type, String flag) {
+        this.money = money;
+        this.time = time;
+        this.type = type;
+        this.flag = flag;
     }
 
     public double getMoney() {

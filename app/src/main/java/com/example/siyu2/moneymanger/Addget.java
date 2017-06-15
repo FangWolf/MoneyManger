@@ -18,17 +18,16 @@ import android.app.Dialog;
 import android.widget.DatePicker;
 import android.widget.Toast;
 
+import DAO.GetDAO;
+import model.Tb_Getmoeny;
+
 public class Addget extends AppCompatActivity {
 
     int mYear, mMonth, mDay;
     ImageButton btndatechoose;
     TextView txtDate;
     final int DATE_DIALOG = 1;
-
     private Spinner txtType;
-    private List<String> data_list;
-    private ArrayAdapter<String> arr_adapter;
-
     EditText txtMoney;
     EditText txtFlag;
 
@@ -47,7 +46,17 @@ public class Addget extends AppCompatActivity {
         btnsend.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //添加收入
+                GetDAO getDAO = new GetDAO();
+                String strMoney = txtMoney.getText().toString();
+                Tb_Getmoeny tb_getmoeny = new Tb_Getmoeny(Double.parseDouble(strMoney),txtDate.getText().toString(),txtType.getSelectedItem().toString(),txtFlag.getText().toString());
+                getDAO.add(tb_getmoeny);
                 Toast.makeText(Addget.this,"添加成功",Toast.LENGTH_SHORT).show();
+                txtMoney.setText("");
+                txtMoney.setHint("多了多少啊~");
+                txtDate.setText("点击后边的按钮选择日期");
+                txtFlag.setText("");
+                txtType.setSelection(0);
             }
         });
 
@@ -74,17 +83,10 @@ public class Addget extends AppCompatActivity {
         mMonth = ca.get(Calendar.MONTH);
         mDay = ca.get(Calendar.DAY_OF_MONTH);
 
-        txtType = (Spinner) findViewById(R.id.txtType);
-        data_list = new ArrayList<String>();
-        data_list.add("工资");
-        data_list.add("奖金");
-        data_list.add("兼职");
-        data_list.add("其他");
-        arr_adapter= new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, data_list);
-        arr_adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        txtType.setAdapter(arr_adapter);
     }
 
+
+    //↓日期
     @Override
     protected Dialog onCreateDialog(int id) {
         switch (id) {

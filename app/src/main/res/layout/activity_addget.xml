@@ -25,12 +25,13 @@
             android:text="收入金额："
             android:textSize="20sp"
             android:textColor="#f4ea2a"/>
+
         <EditText
             android:id="@+id/txtMoney"
             android:layout_width="192dp"
             android:layout_height="wrap_content"
-            android:hint="多了多少啊~"
-            android:layout_weight="0.04"/>
+            android:layout_weight="0.04"
+            android:hint="多了多少啊~"/>
     </LinearLayout>
 
     <LinearLayout
@@ -74,7 +75,8 @@
             android:id="@+id/txtType"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="0.69"/>
+            android:layout_weight="0.69"
+            android:entries="@array/gettype"/>
     </LinearLayout>
 
     <TextView

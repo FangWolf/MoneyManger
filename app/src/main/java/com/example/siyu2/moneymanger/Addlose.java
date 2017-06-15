@@ -21,11 +21,7 @@ public class Addlose extends AppCompatActivity {int mYear, mMonth, mDay;
     ImageButton btndatechoose;
     TextView txtDate;
     final int DATE_DIALOG = 1;
-
     private Spinner txtType;
-    private List<String> data_list;
-    private ArrayAdapter<String> arr_adapter;
-
     EditText txtMoney;
     EditText txtFlag;
 
@@ -71,15 +67,6 @@ public class Addlose extends AppCompatActivity {int mYear, mMonth, mDay;
         mMonth = ca.get(Calendar.MONTH);
         mDay = ca.get(Calendar.DAY_OF_MONTH);
 
-        txtType = (Spinner) findViewById(R.id.txtType);
-        data_list = new ArrayList<String>();
-        data_list.add("工资");
-        data_list.add("奖金");
-        data_list.add("兼职");
-        data_list.add("其他");
-        arr_adapter= new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, data_list);
-        arr_adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        txtType.setAdapter(arr_adapter);
     }
 
     @Override

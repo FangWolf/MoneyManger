@@ -74,7 +74,8 @@
             android:id="@+id/txtType"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="0.69"/>
+            android:layout_weight="0.69"
+            android:entries="@array/losetype"/>
     </LinearLayout>
 
     <TextView

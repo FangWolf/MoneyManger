@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">MoneyManger</string>
+
+    <string-array name="gettype">
+        <item>工资</item>
+        <item>兼职</item>
+        <item>奖金</item>
+        <item>其他</item>
+    </string-array>
+
+    <string-array name="losetype">
+        <item>生活</item>
+        <item>购物</item>
+        <item>交费</item>
+        <item>其他</item>
+    </string-array>
+
 </resources>

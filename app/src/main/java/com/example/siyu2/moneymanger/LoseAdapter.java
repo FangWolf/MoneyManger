@@ -32,7 +32,7 @@ public class LoseAdapter extends RecyclerView.Adapter<LoseAdapter.ViewHolder>{
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.recycler_get,parent,false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.recycler_gl,parent,false);
         ViewHolder holder = new ViewHolder(view);
         return holder;
     }

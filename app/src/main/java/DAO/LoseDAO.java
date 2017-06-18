@@ -99,9 +99,6 @@ public class LoseDAO extends DataSupport {
         } else {
             sum = (int)y;
         }
-        if (sum>999) {
-            sum/=sum;
-        }
         return sum;
     }
 }

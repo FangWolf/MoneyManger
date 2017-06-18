@@ -18,7 +18,7 @@ public class FragmentDlose extends Fragment {
     
     String str[] = {"生活","购物","交费","其他"};
     LoseDAO loseDAO = new LoseDAO();
-    
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle

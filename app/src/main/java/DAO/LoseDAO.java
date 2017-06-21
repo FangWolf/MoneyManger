@@ -17,6 +17,9 @@ public class LoseDAO extends DataSupport {
         tbLosemoney.save();
     }
 
+    public void delate (String s,String ss) {
+        deleteAll(Tb_Losemoney.class,"money = ? and type = ?",s,ss);
+    }
     public float shenghuo() {
         float f = 0 ;
         String s = "0";

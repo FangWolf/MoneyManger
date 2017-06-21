@@ -57,9 +57,14 @@
             android:name=".About"
             android:label="关于">
         </activity>
-        <activity android:name=".UpdataNote">
+        <activity android:name=".UpdataNote"
+                  android:label="修改便签">
         </activity>
-        <activity android:name=".UpdateGet">
+        <activity android:name=".UpdateGet"
+                  android:label="删除收入">
+        </activity>
+        <activity android:name=".UpdateLose"
+                  android:label="删除支出">
         </activity>
     </application>
 

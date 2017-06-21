@@ -29,10 +29,10 @@ public class Login extends AppCompatActivity {
                 Intent intent = new Intent(Login.this,MainActivity.class);
                 if (pwdDAO.find().getPassword().equals(password.getText().toString())) {
                     startActivity(intent);
+                    finish();
                 } else {
-                    Toast.makeText(Login.this,"wrong,again",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Login.this,"密码错误",Toast.LENGTH_SHORT).show();
                 }
-
             }
         });
         Button btnquit = (Button) findViewById(R.id.btnQuit);

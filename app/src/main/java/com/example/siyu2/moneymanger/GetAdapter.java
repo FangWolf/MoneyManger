@@ -9,7 +9,6 @@ import android.widget.TextView;
 
 import java.util.List;
 
-import DAO.GetDAO;
 import model.Tb_Getmoeny;
 
 public class GetAdapter extends RecyclerView.Adapter<GetAdapter.ViewHolder> {

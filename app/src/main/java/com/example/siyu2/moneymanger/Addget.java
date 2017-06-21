@@ -3,15 +3,12 @@ package com.example.siyu2.moneymanger;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.TextView;
 
-import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.List;
 
 import android.app.DatePickerDialog;
 import android.app.Dialog;
@@ -46,7 +43,6 @@ public class Addget extends AppCompatActivity {
         btnsend.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //添加收入
                 GetDAO getDAO = new GetDAO();
                 Tb_Getmoeny tb_getmoeny = new Tb_Getmoeny(txtMoney.getText().toString(),txtDate.getText().toString(),txtType.getSelectedItem().toString(),txtFlag.getText().toString());
                 getDAO.add(tb_getmoeny);

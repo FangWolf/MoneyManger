@@ -77,7 +77,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(intent);
                 break;
             case R.id.Logout:
-                finish();
+                intent = new Intent(MainActivity.this,Login.class);
+                startActivity(intent);
                 break;
             default:
                 break;

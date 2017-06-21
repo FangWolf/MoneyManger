@@ -6,11 +6,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.List;
 
-import fragment.FragmentDnote;
 import model.Tb_Note;
 
 public class NoteAdapter extends RecyclerView.Adapter<NoteAdapter.ViewHolder> {
@@ -41,7 +39,7 @@ public class NoteAdapter extends RecyclerView.Adapter<NoteAdapter.ViewHolder> {
             public void onClick(View view) {
                 int position = holder.getAdapterPosition();
                 Tb_Note tbNote = mNoteList.get(position);
-                Intent intent = new Intent(view.getContext().getApplicationContext(),updata.class);
+                Intent intent = new Intent(view.getContext().getApplicationContext(),UpdataNote.class);
                 String furk = tbNote.getNote();
                 intent.putExtra("note_xinxi",furk);
                 view.getContext().startActivity(intent);

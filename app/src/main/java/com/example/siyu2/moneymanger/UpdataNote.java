@@ -3,7 +3,6 @@ package com.example.siyu2.moneymanger;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -11,7 +10,7 @@ import android.widget.Toast;
 
 import DAO.NoteDAO;
 
-public class updata extends AppCompatActivity {
+public class UpdataNote extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,7 +30,7 @@ public class updata extends AppCompatActivity {
             public void onClick(View view) {
                 NoteDAO noteDao = new NoteDAO();
                 noteDao.updata(string,wenben.getText().toString());
-                Toast.makeText(updata.this,"修改成功,刷新后查看",Toast.LENGTH_SHORT).show();
+                Toast.makeText(UpdataNote.this,"修改成功,刷新后查看",Toast.LENGTH_SHORT).show();
                 finish();
             }
         });
@@ -40,7 +39,7 @@ public class updata extends AppCompatActivity {
             public void onClick(View view) {
                 NoteDAO noteDao = new NoteDAO();
                 noteDao.delate(string);
-                Toast.makeText(updata.this,"删除成功,刷新后查看",Toast.LENGTH_SHORT).show();
+                Toast.makeText(UpdataNote.this,"删除成功,刷新后查看",Toast.LENGTH_SHORT).show();
                 finish();
             }
         });

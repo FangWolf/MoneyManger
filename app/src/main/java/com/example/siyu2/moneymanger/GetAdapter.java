@@ -1,5 +1,6 @@
 package com.example.siyu2.moneymanger;
 
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,6 +9,7 @@ import android.widget.TextView;
 
 import java.util.List;
 
+import DAO.GetDAO;
 import model.Tb_Getmoeny;
 
 public class GetAdapter extends RecyclerView.Adapter<GetAdapter.ViewHolder> {
@@ -16,9 +18,11 @@ public class GetAdapter extends RecyclerView.Adapter<GetAdapter.ViewHolder> {
 
     static class ViewHolder extends RecyclerView.ViewHolder {
         TextView gettype,getmoney,getdate;
+        View getView;
 
         public ViewHolder(View view) {
             super(view);
+            getView = view;
             gettype = (TextView) view.findViewById(R.id.recdate);
             getmoney = (TextView) view.findViewById(R.id.recmoney);
             getdate = (TextView) view.findViewById(R.id.rectype);
@@ -32,7 +36,22 @@ public class GetAdapter extends RecyclerView.Adapter<GetAdapter.ViewHolder> {
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.recycler_gl,parent,false);
-        ViewHolder holder = new ViewHolder(view);
+        final ViewHolder holder = new ViewHolder(view);
+        holder.getView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int position = holder.getAdapterPosition();
+                Tb_Getmoeny tbGetmoeny = mGetList.get(position);
+                Intent intent = new Intent(view.getContext().getApplicationContext(),UpdateGet.class);
+                String furk1 = tbGetmoeny.getTime();
+                intent.putExtra("jine_xinxi",furk1);
+                String furk2 = tbGetmoeny.getType();
+                intent.putExtra("date_xinxi",furk2);
+                String furk3 = tbGetmoeny.getMoney();
+                intent.putExtra("leibie_xinxi",furk3);
+                view.getContext().startActivity(intent);
+            }
+        });
         return holder;
     }
 

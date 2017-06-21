@@ -17,6 +17,10 @@ public class GetDAO extends DataSupport {
         tbGetmoeny.save();
     }
 
+    public  void  delate (String s,String ss) {
+        deleteAll(Tb_Getmoeny.class,"money = ? and type = ?",s,ss);
+    }
+
     public float gongzi() {
         float f = 0 ;
         String s = "0";

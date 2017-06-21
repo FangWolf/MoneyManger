@@ -23,7 +23,6 @@ public class NoteDAO extends DataSupport {
     }
 
     public void delate(String s) {
-        Tb_Note tbnote = new Tb_Note();
         DataSupport.deleteAll(Tb_Note.class,"note = ?" ,s);
     }
 }

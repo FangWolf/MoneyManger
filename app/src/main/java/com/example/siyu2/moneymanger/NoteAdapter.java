@@ -1,13 +1,16 @@
 package com.example.siyu2.moneymanger;
 
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.List;
 
+import fragment.FragmentDnote;
 import model.Tb_Note;
 
 public class NoteAdapter extends RecyclerView.Adapter<NoteAdapter.ViewHolder> {
@@ -15,10 +18,13 @@ public class NoteAdapter extends RecyclerView.Adapter<NoteAdapter.ViewHolder> {
     private List<Tb_Note> mNoteList;
 
     static class ViewHolder extends RecyclerView.ViewHolder {
-         TextView note,id;
+        TextView note,id;
+        View noteView;
+
         public ViewHolder (View view) {
             super(view);
             note = (TextView) view.findViewById(R.id.recnote);
+            noteView = view;
         }
     }
 
@@ -29,7 +35,18 @@ public class NoteAdapter extends RecyclerView.Adapter<NoteAdapter.ViewHolder> {
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.recycler_nt,parent,false);
-        ViewHolder holder = new ViewHolder(view);
+        final ViewHolder holder = new ViewHolder(view);
+        holder.noteView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int position = holder.getAdapterPosition();
+                Tb_Note tbNote = mNoteList.get(position);
+                Intent intent = new Intent(view.getContext().getApplicationContext(),updata.class);
+                String furk = tbNote.getNote();
+                intent.putExtra("note_xinxi",furk);
+                view.getContext().startActivity(intent);
+            }
+        });
         return holder;
     }
 

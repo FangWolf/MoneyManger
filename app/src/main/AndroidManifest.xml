@@ -57,6 +57,8 @@
             android:name=".About"
             android:label="关于">
         </activity>
+        <activity android:name=".updata">
+        </activity>
     </application>
 
 </manifest>
